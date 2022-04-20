@@ -1,8 +1,9 @@
 # Amazon_Vine_Analysis
 
 ## Overview of the analysis: 
- The purpose of this analysis is to stydy the reviews written by members of the paid Amazon Vine program and determine if there is any bias toward favorable reviews from Vine members in the dataset available
-For my case I choose to conduct this study on the US wireless by using AWS, postgresql, and PySpark in Google Colab.
+ This project analyzes Amazon Vine program and determines if there is a bias toward favorable reviews from Vine members.
+The analysis uses PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, load the transformed data into pgAdmin and calculate different metrics.
+We focused on the US reviews for video games.
 ## Results: 
 * How many Vine reviews and non-Vine reviews were there?
 The global number of reviews is about 65 547, but a small number of then is paid, around 0.953 for 613 reviews. The large majority is unpaid for 64 934 reviews.
@@ -18,5 +19,5 @@ Out of the 613 paid reviews 222 are 5 starts for 36.215%, and regarding the 64 9
 ## Percentage of 5 stars ![Percentage of 5 stars](https://user-images.githubusercontent.com/89410157/145913992-4b394a49-0792-4b08-bc55-acaaf0864e66.png)
 
 ## Summary: 
-Based on our finding we can say that the 5 stars reviews are not the majority in the paid review. So, the tendency is that the review tend to be critical. To support this statement, we could take the “review_body” and analyze the Term Frequency-Inverse Document Frequency Weight and build and pipeline into to run the Model and determine the tendency of the reviews. 
+Comparing the percentage of reviews that were 5 stars from both Amazon Vine members and not Amazon Vine members, it can be concluded that there is no positivity bias for reviews of Office Products in the Vine program. The percentage of five-star reviews from both groups are nearly the same, rounded to 44%. A similar analysis could be conducted to compare the one-star or low reviews from both Vine and non-Vine members to further support this conclusion.
 
